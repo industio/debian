@@ -246,6 +246,7 @@ cd -
 systemctl enable rkwifi-bt
 systemctl enable bt-set
 systemctl enable usbdevice
+systemctl enable rockchip
 
 ln -srf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 
