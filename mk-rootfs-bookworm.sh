@@ -3,6 +3,16 @@
 # Directory contains the target rootfs
 TARGET_ROOTFS_DIR="binary"
 
+if [ ! -e packages/arm64/chromium/chromium-x11_132.0.6834.83_arm64.deb ]; then
+	cat packages/arm64/chromium/chromium-x11_132.0.6834.83_arm64.deb.a* > packages/arm64/chromium/chromium-x11_132.0.6834.83_arm64.deb
+	rm packages/arm64/chromium/chromium-x11_132.0.6834.83_arm64.deb.a*
+fi
+
+if [ ! -e packages/armhf/chromium/chromium-x11_132.0.6834.83_armhf.deb ]; then
+	cat packages/armhf/chromium/chromium-x11_132.0.6834.83_armhf.deb.a* > packages/armhf/chromium/chromium-x11_132.0.6834.83_armhf.deb
+	rm packages/armhf/chromium/chromium-x11_132.0.6834.83_armhf.deb.a*
+fi
+
 case "${ARCH:-$1}" in
 	arm|arm32|armhf)
 		ARCH=armhf
