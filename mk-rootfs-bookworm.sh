@@ -249,7 +249,7 @@ systemctl enable usbdevice
 
 ln -srf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 
-echo "SystemMaxUse=32M\nForwardToSyslog=no" >> /etc/systemd/journald.conf/etc/systemd/journald.conf
+echo "SystemMaxUse=32M\nForwardToSyslog=no" >> /etc/systemd/journald.conf
 
 echo "linaro:123456" | chpasswd
 echo "root:123456" | chpasswd
