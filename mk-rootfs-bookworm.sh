@@ -247,6 +247,8 @@ systemctl enable rkwifi-bt
 systemctl enable bt-set
 systemctl enable usbdevice
 
+ln -srf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
+
 rm -rf /var/lib/apt/lists/*
 rm -rf /var/cache/
 rm -rf /packages/
