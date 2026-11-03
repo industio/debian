@@ -243,6 +243,10 @@ then
 fi
 cd -
 
+systemctl enable rkwifi-bt
+systemctl enable bt-set
+systemctl enable usbdevice
+
 rm -rf /var/lib/apt/lists/*
 rm -rf /var/cache/
 rm -rf /packages/
