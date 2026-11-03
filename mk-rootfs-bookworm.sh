@@ -249,6 +249,8 @@ systemctl enable usbdevice
 
 ln -srf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
 
+echo "SystemMaxUse=32M\nForwardToSyslog=no" >> /etc/systemd/journald.conf/etc/systemd/journald.conf
+
 rm -rf /var/lib/apt/lists/*
 rm -rf /var/cache/
 rm -rf /packages/
