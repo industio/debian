@@ -195,6 +195,9 @@ find /usr/lib/systemd/ -name "wireplumber*.service" | xargs sed -i "/Environment
 \${APT_INSTALL} /packages/weston/*.deb
 \${APT_INSTALL} /packages/wayland/*.deb
 
+#--------------------ffmpeg --------------------
+\${APT_INSTALL} /packages/ffmpeg/*.deb
+
 # HACK debian11.3 to fix bug
 #\${APT_INSTALL} fontconfig --reinstall
 
