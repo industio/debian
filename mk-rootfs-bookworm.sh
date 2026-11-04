@@ -256,6 +256,8 @@ echo "SystemMaxUse=32M\nForwardToSyslog=no" >> /etc/systemd/journald.conf
 echo "linaro:123456" | chpasswd
 echo "root:123456" | chpasswd
 
+apt-get install iperf3 -y
+
 rm -rf /var/lib/apt/lists/*
 rm -rf /var/cache/
 rm -rf /packages/
