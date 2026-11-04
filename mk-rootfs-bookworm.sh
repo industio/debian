@@ -258,6 +258,21 @@ echo "root:123456" | chpasswd
 
 apt-get install iperf3 -y
 
+apt-get install samba -y
+echo "
+[linaro-rootfs]
+path = /home/linaro
+available = yes
+valid users = linaro
+read only = no
+browsable = yes
+public = yes
+writable = yes
+" >> /etc/samba/smb.conf
+
+echo -e "123456\n123456" | smbpasswd -a linaro
+echo -e "123456\n123456" | smbpasswd -a root
+
 rm -rf /var/lib/apt/lists/*
 rm -rf /var/cache/
 rm -rf /packages/
