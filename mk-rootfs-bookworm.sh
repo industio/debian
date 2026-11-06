@@ -260,6 +260,7 @@ echo "linaro:123456" | chpasswd
 echo "root:123456" | chpasswd
 
 apt-get install iperf3 -y
+apt-get install rt-tests -y
 
 apt-get install samba -y
 echo "
