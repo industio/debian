@@ -261,6 +261,11 @@ echo "root:123456" | chpasswd
 
 apt-get install iperf3 -y
 apt-get install rt-tests -y
++apt-get install docker.io -y
+update-alternatives --set iptables /usr/sbin/iptables-legacy
+update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+
+cp /opt/docker/daemon.json /etc/docker/daemon.json -f
 
 apt-get install samba -y
 echo "
