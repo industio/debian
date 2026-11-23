@@ -204,6 +204,12 @@ find /usr/lib/systemd/ -name "wireplumber*.service" | xargs sed -i "/Environment
 #\${APT_INSTALL} xfce4
 #ln -sf /usr/bin/startxfce4 /etc/alternatives/x-session-manager
 
+#-------------------linux-headers-----------------
+\${APT_INSTALL} make
+\${APT_INSTALL} gcc
+ln -sf /usr/bin/python3 /usr/bin/python
+\${APT_INSTALL} /packages/linux-headers/*.deb
+
 # HACK to disable the kernel logo on bootup
 #sed -i "/exit 0/i \ echo 3 > /sys/class/graphics/fb0/blank" /etc/rc.local
 
