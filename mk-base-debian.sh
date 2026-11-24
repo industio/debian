@@ -34,7 +34,7 @@ else
 	if [ -e linaro-$RELEASE-alip-*.tar.gz ]; then
 		#rm linaro-$RELEASE-alip-*.tar.gz
 		echo -e "\033[36m debian base has already been built, skip \033[0m"
-		echo -e "\033[36m if you want to rebuild debian base, use the option rebuild=y \033[0m"
+		echo -e "\033[36m if you want to rebuild debian base, use the option REBUILD=y \033[0m"
 		exit 0
 	fi
 fi
