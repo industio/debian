@@ -288,6 +288,8 @@ writable = yes
 echo -e "123456\n123456" | smbpasswd -a linaro
 echo -e "123456\n123456" | smbpasswd -a root
 
+apt-get install exfat-fuse -y
+
 rm -rf /var/lib/apt/lists/*
 rm -rf /var/cache/
 rm -rf /packages/
